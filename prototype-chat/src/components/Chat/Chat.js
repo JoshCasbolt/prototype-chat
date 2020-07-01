@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ChatOutput from './ChatOutput/ChatOutput.js';
-import ChatInput from './ChatInput/ChatInput.js';
+import ChatOutput from '../ChatOutput/ChatOutput.js';
+import ChatInput from '../ChatInput/ChatInput.js';
 
 class Chat extends Component {
     render() {
