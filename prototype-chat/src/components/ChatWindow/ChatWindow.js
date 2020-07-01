@@ -15,11 +15,21 @@ class ChatWindow extends Component {
         ],
     }
 
+    addMessage = (message) => {
+        this.setState((currentState) => ({
+            messages: [
+                ...currentState.messages,
+                message,
+            ],
+
+        }))
+    }
+
     render() {
         return (
-            <div className='chat-window'>
-                <Chat users={this.state.users} messages={this.state.messages} user='Amy' />
-                <Chat users={this.state.users} messages={this.state.messages} user='John'/>
+            <div className='container'>
+                <Chat handleAddMessage={this.addMessage} users={this.state.users} messages={this.state.messages} user='Amy' />
+                <Chat handleAddMessage={this.addMessage} users={this.state.users} messages={this.state.messages} user='John'/>
             </div>
         );
     }

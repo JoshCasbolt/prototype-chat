@@ -5,10 +5,10 @@ import ChatInput from '../ChatInput/ChatInput.js';
 class Chat extends Component {
     render() {
         return (
-            <div>
+            <div className="chat-window">
                 <h2>Super Awesome Chat</h2>
-                <ChatOutput/>
-                <ChatInput/>
+                <ChatOutput user={this.props.user} users={this.props.users} messages={this.props.messages}/>
+                <ChatInput user={this.props.user} handleAddMessage={this.props.handleAddMessage} />
             </div>
         );
     }
