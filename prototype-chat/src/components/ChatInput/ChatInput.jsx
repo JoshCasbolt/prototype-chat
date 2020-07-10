@@ -42,14 +42,16 @@ class ChatInput extends Component {
       } = this.state;
 
       return (
-        <form className="input-group" onSubmit={(e) => this.handleSubmit(e)}>
-          <input type="text" className="form-control" placeholder="Enter your message..." value={input} onChange={(e) => this.handleInputChange(e.target.value)} />
-          <div className="input-group-append">
-            <button className="btn submit-button" disabled={this.shouldButtonBeDisabled()} type="submit">
-              Send
-            </button>
-          </div>
-        </form>
+        <div>
+          <form className="input-group" onSubmit={(e) => this.handleSubmit(e)}>
+            <input type="text" className="form-control" placeholder="Enter your message..." value={input} onChange={(e) => this.handleInputChange(e.target.value)} />
+            <div className="input-group-append">
+              <button className="btn submit-button" disabled={this.shouldButtonBeDisabled()} type="submit">
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
       );
     }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './assets/css/bootstrap.css';
 import ChatWindow from './components/ChatWindow/ChatWindow';
 
 class App extends Component {
