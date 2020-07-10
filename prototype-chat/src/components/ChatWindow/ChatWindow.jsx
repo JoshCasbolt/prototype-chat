@@ -28,8 +28,6 @@ class ChatWindow extends Component {
       const messageToAdd = message;
       messageToAdd.uniqueId = this.getUniqueArrayId(messages);
 
-      console.table(messageToAdd);
-
       this.setState((currentState) => ({
         messages: [
           ...currentState.messages,

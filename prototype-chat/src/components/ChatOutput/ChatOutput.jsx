@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 function ChatOutput(props) {
-  const { user, messages, users } = props;
+  const { user, messages } = props;
   return (
     <div>
       <div className="name sender">{user}</div>
@@ -12,7 +12,7 @@ function ChatOutput(props) {
           <li
             key={message.uniqueId}
             className={
-                    message.username === users[0].username ? 'message sender' : 'message recipient'
+                    message.username === user ? 'message sender' : 'message recipient'
                 }
           >
             <p>{`${message.username}: ${message.text}`}</p>
