@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import ChatWindow from './components/ChatWindow/ChatWindow.js';
+import ChatWindow from './components/ChatWindow/ChatWindow';
 
 class App extends Component {
   /*

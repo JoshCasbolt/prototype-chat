@@ -8,8 +8,8 @@ class ChatInput extends Component {
         e.preventDefault();
 
         const messageToAdd = {
-            user: this.props.user,
-            message: this.state.input,
+            text: this.state.input,
+            username: this.props.user,
         }
 
         this.props.handleAddMessage(messageToAdd);
@@ -19,7 +19,7 @@ class ChatInput extends Component {
     }
 
     shouldButtonBeDisabled = () => {
-        return !this.state.input ? true : false
+        return !this.state.input ? true : false;
     }
 
     handleInputChange = (input) => {

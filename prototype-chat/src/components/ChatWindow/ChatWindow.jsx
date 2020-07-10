@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Chat from '../Chat/Chat.js';
+import Chat from '../Chat/Chat';
 
 class ChatWindow extends Component {
     state = {
@@ -16,6 +16,7 @@ class ChatWindow extends Component {
     }
 
     addMessage = (message) => {
+        console.table(message);
         this.setState((currentState) => ({
             messages: [
                 ...currentState.messages,
